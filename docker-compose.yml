@@ -1,0 +1,7 @@
+version: '3.5'
+services:
+  app:
+    image: pw0k/stranger-bot:latest
+    environment:
+      STRANGER_TELEGRAMBOT_TOKEN: ${STRANGER_TELEGRAMBOT_TOKEN}
+    restart: unless-stopped
