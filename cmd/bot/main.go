@@ -29,6 +29,9 @@ func main() {
 	for update := range updates {
 		if update.Message != nil {
 			messageHandler.HandleMessage(update.Message)
+		} else if update.CallbackQuery != nil {
+			// Handle the callback query
+			// You can use a similar approach as with message handling
 		}
 	}
 }
