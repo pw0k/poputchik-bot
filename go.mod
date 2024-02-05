@@ -2,7 +2,9 @@ module stranger-bot
 
 go 1.21.6
 
-require github.com/mymmrac/telego v0.28.0
+require (
+	github.com/mymmrac/telego v0.28.0
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
@@ -17,6 +19,7 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.51.0 // indirect
+	go.uber.org/multierr v1.10.0 // indirect
 	golang.org/x/arch v0.6.0 // indirect
 	golang.org/x/sys v0.14.0 // indirect
 )
