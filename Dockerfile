@@ -2,7 +2,8 @@ FROM golang:alpine3.19 AS builder
 WORKDIR /build
 ADD go.mod .
 COPY . .
-RUN go build -o stranger-bot main.go
+#RUN go build -o stranger-bot main.go
+RUN go build -o stranger-bot ./cmd/bot
 
 
 FROM alpine:3.19

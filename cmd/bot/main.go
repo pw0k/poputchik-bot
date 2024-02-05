@@ -22,12 +22,13 @@ func main() {
 	defer bot.StopLongPolling()
 
 	userService := service.NewUserService()
-	messageHandler := handler.NewMessageHandler(bot, userService)
+	commandService := handler.NewCommandService()
+	messageHandler := handler.NewMessageHandler(bot, userService, commandService)
 
 	updates, _ := bot.UpdatesViaLongPolling(nil)
 	for update := range updates {
 		if update.Message != nil {
-			messageHandler.HandleMessage(*update.Message)
+			messageHandler.HandleMessage(update.Message)
 		}
 	}
 }
